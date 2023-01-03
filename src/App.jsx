@@ -52,6 +52,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className='app-background'>
       <h1 className='title__rick'>Rick and Morty app</h1>
       <form className='title__form' onSubmit={handleSubmit}>
         <div className='container__search'>
@@ -59,12 +60,17 @@ function App() {
         <button className='btn__search' >Search</button>
         </div>
       </form>
+      </div>
+      
       {
         hasError ? 
         <ErrorFetch /> 
         :
+        
         <>
+        
       <LocationInfo location={location} />
+      
     <div className='residents-container'>
       {
         location?.residents.map(url => (
